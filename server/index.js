@@ -1,13 +1,10 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const PORT = 3000;
 
-
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
 app.listen(PORT, () => console.log('Listening on port: ' + PORT));
 
+//helper to cut every third letter of string out
 const cutString = (str) => {
   let finalStr = '', pointer = 1;
   for(const char of str) {
